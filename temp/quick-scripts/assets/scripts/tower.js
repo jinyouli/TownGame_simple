@@ -7,19 +7,28 @@ cc._RF.push(module, '99bbez/HJJGMJzlG06jhbwI', 'tower', __filename);
 cc.Class({
     extends: cc.Component,
 
-    properties: {},
+    properties: {
+        spriteFrames: {
+            default: [],
+            type: cc.SpriteFrame
+        }
+    },
 
-    // onLoad () {},
-
-    start: function start() {},
-
+    onLoad: function onLoad() {
+        this.levelCount = 0;
+    },
 
     updateTower: function updateTower() {
-        cc.log("updateTower");
+        if (this.levelCount < this.spriteFrames.length - 1) {
+            this.levelCount++;
+            this.node.getComponent(cc.Sprite).spriteFrame = this.spriteFrames[this.levelCount];
+        } else {
+            cc.log("满级");
+        }
     },
 
     sellTower: function sellTower() {
-        cc.log("sellTower");
+        this.node.destroy();
     }
 
     // update (dt) {},

@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mash_room_4",
+    "texture": "b182e83f-f994-45ff-8590-328c6907a7bb",
+    "atlas": "",
+    "rect": [
+      8,
+      16,
+      64,
+      60
+    ],
+    "offset": [
+      0,
+      -6
+    ],
+    "originalSize": [
+      80,
+      80
+    ]
+  }
+}

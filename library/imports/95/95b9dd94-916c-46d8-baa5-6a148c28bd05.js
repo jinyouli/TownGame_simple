@@ -60,6 +60,12 @@ cc.Class({
         _global2.default.event.on("build_tower", this.buildTower.bind(this));
         _global2.default.event.on("update_tower", this.updateTower.bind(this));
         _global2.default.event.on("sell_tower", this.sellTower.bind(this));
+        _global2.default.event.on("game_start", this.gameStart.bind(this));
+
+        this.currentWaveCount = 0;
+        this.enemyCount = 0;
+        this.addEnemyTime = 0;
+        this.addWaveCurrentTime = 0;
     },
 
     setTouchEvent: function setTouchEvent(node) {
@@ -150,9 +156,69 @@ cc.Class({
     sellTower: function sellTower() {
         var node = this.closeMenu();
         node.tower.getComponent("tower").sellTower();
+        this.setState(node, TowerNodeState.Null);
+    },
+
+    gameStart: function gameStart() {
+        var _this = this;
+
+        cc.loader.loadRes("./level_config", function (err, result) {
+            if (err) {
+                cc.log("load err = " + err);
+            } else {
+                cc.log("load config = ", JSON.stringify(result));
+            }
+
+            var config = result["level_1"];
+            var waves = config["waves"];
+            _this.config = config;
+            _this.wavesConfig = waves;
+            _this.currentWaveConfig = waves[_this.currentWaveCount];
+        });
+    },
+
+    addWave: function addWave() {},
+
+    addEnemy: function addEnemy() {
+        cc.log("add Enemy == " + this.currentWaveCount);
+    },
+
+    update: function update(dt) {
+
+        if (this.currentWaveConfig) {
+
+            if (this.addEnemyTime > this.currentWaveConfig.dt) {
+
+                this.addEnemyTime = 0;
+                this.enemyCount++;
+                this.addEnemy();
+
+                if (this.enemyCount >= this.currentWaveConfig.count) {
+                    this.currentWaveConfig = undefined;
+                    this.enemyCount = 0;
+                };
+            } else {
+                this.addEnemyTime += dt;
+            }
+        } else {
+
+            if (this.addWaveCurrentTime > this.config.dt) {
+
+                this.currentWaveConfig = this.wavesConfig[this.currentWaveCount];
+                if (this.currentWaveCount < this.wavesConfig.length) {
+                    this.currentWaveCount++;
+                } else {
+                    this.currentWaveConfig = undefined;
+                };
+
+                this.addWaveCurrentTime = 0;
+            } else {
+
+                this.addWaveCurrentTime += dt;
+            };
+        }
     }
 
-    // update (dt) {},
 });
 
 cc._RF.pop();

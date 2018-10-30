@@ -97,7 +97,18 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true
+    "_enabled": true,
+    "spriteFrames": [
+      {
+        "__uuid__": "3032090d-ca6b-4778-bb45-9bf62ad741b5"
+      },
+      {
+        "__uuid__": "6372e23e-d7ae-4d50-9151-9859eab8f8cc"
+      },
+      {
+        "__uuid__": "1e6fdf5a-3aac-4c12-9ba1-9b9fe6b2ffd0"
+      }
+    ]
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -105,7 +116,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "79ee3f0a-f47d-44e7-bb30-690b0cfa3bb7"
     },
     "fileId": "a5XjWM565OQpVEPyjawwZB",
     "sync": false

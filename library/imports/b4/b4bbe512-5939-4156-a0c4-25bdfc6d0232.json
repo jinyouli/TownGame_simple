@@ -91,13 +91,24 @@
     "_atlas": null
   },
   {
-    "__type__": "e52e8Wwxi9HqJtnmZ7LcCp/",
+    "__type__": "99bbez/HJJGMJzlG06jhbwI",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
-    "_enabled": true
+    "_enabled": true,
+    "spriteFrames": [
+      {
+        "__uuid__": "88354792-c450-4862-a4b9-5befb189e35c"
+      },
+      {
+        "__uuid__": "ae8591b9-3e76-44b4-a02e-793d0bc782b6"
+      },
+      {
+        "__uuid__": "72f44335-10e3-4972-af34-c5a96db7546f"
+      }
+    ]
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -105,7 +116,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4bbe512-5939-4156-a0c4-25bdfc6d0232"
     },
     "fileId": "5d9tyOG1VF9JubEjukP0I/",
     "sync": false
