@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "塔防_03",
+    "texture": "87c74c8e-c586-40cb-aa50-725dfd1e21f7",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      93,
+      114
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      93,
+      114
+    ]
+  }
+}
