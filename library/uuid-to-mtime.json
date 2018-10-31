@@ -230,7 +230,7 @@
     "relativePath": "res"
   },
   "d83f801a-44d8-465c-bb92-7179c37d4ea0": {
-    "asset": 1540611067887,
+    "asset": 1540870202920,
     "meta": 1540611067873,
     "relativePath": "res/images"
   },
@@ -330,17 +330,17 @@
     "relativePath": "res/images/塔防_48.png"
   },
   "7df74fae-bc45-4b0a-ab32-9105134a46a2": {
-    "asset": 1540794958579,
+    "asset": 1540889361821,
     "meta": 1540611067896,
     "relativePath": "scripts"
   },
   "125fa8aa-e484-42d0-ae07-2e37f1602575": {
-    "asset": 1540894270016,
-    "meta": 1540894270024,
+    "asset": 1540980207203,
+    "meta": 1540980207228,
     "relativePath": "game_scene.fire"
   },
   "99773b17-20a8-445b-be12-b69f17658178": {
-    "asset": 1540794914620,
+    "asset": 1540870267588,
     "meta": 1540611638184,
     "relativePath": "prefabs"
   },
@@ -350,13 +350,13 @@
     "relativePath": "prefabs/AddTown.prefab"
   },
   "79ee3f0a-f47d-44e7-bb30-690b0cfa3bb7": {
-    "asset": 1540866062827,
-    "meta": 1540866062833,
+    "asset": 1540971621986,
+    "meta": 1540971622018,
     "relativePath": "prefabs/tower_1.prefab"
   },
   "b4bbe512-5939-4156-a0c4-25bdfc6d0232": {
-    "asset": 1540866087569,
-    "meta": 1540866087580,
+    "asset": 1540971632439,
+    "meta": 1540971632446,
     "relativePath": "prefabs/tower_2.prefab"
   },
   "242a423f-7c95-4a92-b885-c9408e694cac": {
@@ -375,8 +375,8 @@
     "relativePath": "scripts/build_menu.js"
   },
   "27693e42-f64f-4eb8-a881-5f71c984b811": {
-    "asset": 1540795156903,
-    "meta": 1540795156916,
+    "asset": 1540949925967,
+    "meta": 1540949926155,
     "relativePath": "prefabs/level_1.prefab"
   },
   "c940534a-407c-4a6b-83d6-6c528a98784d": {
@@ -388,11 +388,6 @@
     "asset": 1540803658433,
     "meta": 1540803661659,
     "relativePath": "scripts/update_menu.js"
-  },
-  "99bbecff-1c92-4630-9ce5-1b4ea385bc08": {
-    "asset": 1540867376429,
-    "meta": 1540867378027,
-    "relativePath": "scripts/tower.js"
   },
   "e1407987-2a54-4f38-a97d-385124877613": {
     "asset": 1516585666000,
@@ -434,11 +429,6 @@
     "meta": 1540879822720,
     "relativePath": "prefabs/mash_0.prefab"
   },
-  "a110e7e5-afd8-4a98-ba4e-274a5550b55c": {
-    "asset": 1540880089705,
-    "meta": 1540880227558,
-    "relativePath": "scripts/enemy.js"
-  },
   "f7580ca5-d91d-4c56-9d6d-8edddd25d781": {
     "asset": 1540882961581,
     "meta": 1540882962909,
@@ -450,23 +440,38 @@
     "relativePath": "scripts/gameUILayer.js"
   },
   "6486d399-931e-4e4e-9215-7ad7ee5ab45e": {
-    "asset": 1540889253052,
+    "asset": 1540889386817,
     "meta": 1540889259289,
     "relativePath": "resources"
   },
   "0b807b53-45ca-4f40-86ac-fe9809f4b24e": {
-    "asset": 1540882460878,
+    "asset": 1540968304927,
     "meta": 1540889386815,
     "relativePath": "resources/enemy_config.json"
   },
+  "a110e7e5-afd8-4a98-ba4e-274a5550b55c": {
+    "asset": 1540970058457,
+    "meta": 1540970667434,
+    "relativePath": "scripts/enemy.js"
+  },
+  "20d5c658-aa41-4ccd-b093-211eb38a92fc": {
+    "asset": 1540972176060,
+    "meta": 1540971455462,
+    "relativePath": "resources/tower_config.json"
+  },
   "b11af5ba-da95-4d2d-82e4-57331de9097e": {
-    "asset": 1540890686648,
+    "asset": 1540979418582,
     "meta": 1540889386818,
     "relativePath": "resources/level_config.json"
   },
   "95b9dd94-916c-46d8-baa5-6a148c28bd05": {
-    "asset": 1540894262442,
-    "meta": 1540894267947,
+    "asset": 1540979959587,
+    "meta": 1540979962574,
     "relativePath": "scripts/level.js"
+  },
+  "99bbecff-1c92-4630-9ce5-1b4ea385bc08": {
+    "asset": 1540980058559,
+    "meta": 1540980061318,
+    "relativePath": "scripts/tower.js"
   }
 }

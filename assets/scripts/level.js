@@ -37,8 +37,12 @@ cc.Class({
         updateTowerPrefab: {
             default: null,
             type : cc.Prefab
-        }
+        },
 
+        enemyPrefab : {
+            default: null,
+            type : cc.Prefab
+        }
     },
 
     onLoad: function() {
@@ -57,6 +61,8 @@ cc.Class({
         this.enemyCount = 0;
         this.addEnemyTime = 0;
         this.addWaveCurrentTime = 0;
+
+        this.enemyNodeList = [];
     },
 
     setTouchEvent: function(node){
@@ -137,6 +143,7 @@ cc.Class({
         tower.position = node.position;
         this.setState(node,TowerNodeState.Tower);
         node.tower = tower;
+
     },
 
     onDestory: function(){
@@ -160,14 +167,13 @@ cc.Class({
                 cc.log("load err = " + err);
             }else {
                 cc.log("load config = ", JSON.stringify(result));
+
+                let config = result["level_1"];
+                let waves = config["waves"];
+                this.config = config;
+                this.wavesConfig = waves;
+                this.currentWaveConfig = waves[this.currentWaveCount];
             }
-
-            let config = result["level_1"];
-            let waves = config["waves"];
-            this.config = config;
-            this.wavesConfig = waves;
-            this.currentWaveConfig = waves[this.currentWaveCount];
-
         });
     },
 
@@ -175,8 +181,14 @@ cc.Class({
 
     },
 
-    addEnemy: function (){
-        cc.log("add Enemy == " + this.currentWaveCount);
+    addEnemy: function (type){
+
+        cc.log ("add type == " + type);
+        let enenmy = cc.instantiate(this.enemyPrefab);
+        enenmy.getComponent("enemy").initWithData(type, this.enemyPathNodes);
+        enenmy.parent = this.node;
+
+        this.enemyNodeList.push(enenmy);
     },
 
     update: function (dt){
@@ -187,7 +199,7 @@ cc.Class({
 
                 this.addEnemyTime = 0;
                 this.enemyCount ++;
-                this.addEnemy();
+                this.addEnemy(this.currentWaveConfig.type);
 
                 if (this.enemyCount >= this.currentWaveConfig.count) {
                     this.currentWaveConfig = undefined;
@@ -199,8 +211,8 @@ cc.Class({
             }
         }
         else {
-
-            if (this.addWaveCurrentTime > this.config.dt) {
+            if (this.config) {
+                if (this.addWaveCurrentTime > this.config.dt) {
 
                 this.currentWaveConfig = this.wavesConfig[this.currentWaveCount];
                 if (this.currentWaveCount < this.wavesConfig.length ) {
@@ -214,6 +226,24 @@ cc.Class({
 
                 this.addWaveCurrentTime += dt;
             };
+            };
+
+            for(let i=0; i<this.towerPosNodes.length; i++){
+                let tower = this.towerPosNodes[i].tower;
+
+                if (tower) {
+
+                    for(let j=0; j < this.enemyNodeList.length; j++){
+                        let enemy = this.enemyNodeList[j];
+
+                        if (enemy.getComponent("enemy").isLiving) {
+                            // let distance = cc.pDistance(tower);
+                            tower.getComponent("tower").setEnemy(enemy);
+                        };
+                    }
+                };
+            }
+            
         }
     }
 

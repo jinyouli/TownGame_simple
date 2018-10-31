@@ -1442,6 +1442,9 @@
     ],
     "updateTowerPrefab": {
       "__uuid__": "c940534a-407c-4a6b-83d6-6c528a98784d"
+    },
+    "enemyPrefab": {
+      "__uuid__": "f40d78ac-be1c-4263-80a8-bd9a5bdd46ad"
     }
   },
   {

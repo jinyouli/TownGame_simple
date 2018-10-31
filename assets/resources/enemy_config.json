@@ -1,22 +1,22 @@
 {
 
-	"0":{
-		"speed" : 100,
+	"enemy_0":{
+		"speed" : 50,
 		"health" : 2
 		},
 
-	"1":{
-		"speed" : 100,
+	"enemy_1":{
+		"speed" : 30,
 		"health" : 1
 		},
 
-	"2":{
-		"speed" : 200,
+	"enemy_2":{
+		"speed" : 20,
 		"health" : 2
 		},
 
-	"3":{
-		"speed" : 50,
+	"enemy_3":{
+		"speed" : 40,
 		"health" : 5
 		}
 }

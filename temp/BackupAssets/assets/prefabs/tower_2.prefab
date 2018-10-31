@@ -107,7 +107,8 @@
       {
         "__uuid__": "72f44335-10e3-4972-af34-c5a96db7546f"
       }
-    ]
+    ],
+    "towerType": "tower_b"
   },
   {
     "__type__": "cc.PrefabInfo",
