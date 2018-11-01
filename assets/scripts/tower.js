@@ -1,3 +1,4 @@
+import global from "./global"
 
 cc.Class({
     extends: cc.Component,
@@ -16,6 +17,8 @@ cc.Class({
         this.currentDamage = 0;
         this.lookRange = 0;
         this.currentAttackRange = 0;
+        this.shootBulletDt = 0;
+        this.currentBulletDt = 0;
 
         cc.loader.loadRes("./tower_config",(err, result)=>{
             if (err) {
@@ -26,6 +29,7 @@ cc.Class({
                 this.currentDamage = this.towerConfig.damage[this.levelCount];
                 this.currentAttackRange = this.towerConfig.actack_range[this.levelCount];
                 this.lookRange = this.towerConfig.look_range;
+                this.shootBulletDt = this.towerConfig.shoot_dt[this.levelCount];
             }
         });
     },
@@ -60,10 +64,9 @@ cc.Class({
 
         let distance = cc.pDistance(enemy.position,this.node.position);
 
-        if (distance < 200) {
+        if (distance < 400) {
             this.enemy = enemy;
         };  
-        this.enemy = enemy;      
     },
 
     update : function(dt){
@@ -73,8 +76,22 @@ cc.Class({
             let angle = cc.pAngleSigned(direction, cc.p(0,1));
             this.node.rotation = (180 / Math.PI) * angle;
 
-            
+            if (this.currentBulletDt > this.shootBulletDt ) {
+                this.currentBulletDt = 0;
+                this.shootBullet();
+            }else{
+                this.currentBulletDt += dt;
+            }
+
+            let distance = cc.pDistance(this.enemy.position, this.node.position);
+            if (distance > this.currentAttackRange) {
+                this.enemy = undefined;
+            };
         }
+    },
+
+    shootBullet: function(){
+        global.event.fire("addBullet",this.node, this.enemy.position);
     }
 
 });

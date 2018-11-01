@@ -51,6 +51,11 @@ cc.Class({
         enemyPrefab: {
             default: null,
             type: cc.Prefab
+        },
+
+        bulletPrefab: {
+            default: null,
+            type: cc.Prefab
         }
     },
 
@@ -65,6 +70,7 @@ cc.Class({
         _global2.default.event.on("update_tower", this.updateTower.bind(this));
         _global2.default.event.on("sell_tower", this.sellTower.bind(this));
         _global2.default.event.on("game_start", this.gameStart.bind(this));
+        _global2.default.event.on("addBullet", this.addBullet.bind(this));
 
         this.currentWaveCount = 0;
         this.enemyCount = 0;
@@ -163,6 +169,7 @@ cc.Class({
         var node = this.closeMenu();
         node.tower.getComponent("tower").sellTower();
         this.setState(node, TowerNodeState.Null);
+        node.tower = undefined;
     },
 
     gameStart: function gameStart() {
@@ -193,6 +200,13 @@ cc.Class({
         enenmy.parent = this.node;
 
         this.enemyNodeList.push(enenmy);
+    },
+
+    addBullet: function addBullet(tower, position) {
+        var bullet = cc.instantiate(this.bulletPrefab);
+        bullet.position = tower.position;
+        bullet.parent = this.node;
+        bullet.getComponent("bullet").initWithData(tower, position);
     },
 
     update: function update(dt) {

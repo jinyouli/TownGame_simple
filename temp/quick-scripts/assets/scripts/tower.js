@@ -4,6 +4,12 @@ cc._RF.push(module, '99bbez/HJJGMJzlG06jhbwI', 'tower', __filename);
 
 "use strict";
 
+var _global = require("./global");
+
+var _global2 = _interopRequireDefault(_global);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 cc.Class({
     extends: cc.Component,
 
@@ -23,6 +29,8 @@ cc.Class({
         this.currentDamage = 0;
         this.lookRange = 0;
         this.currentAttackRange = 0;
+        this.shootBulletDt = 0;
+        this.currentBulletDt = 0;
 
         cc.loader.loadRes("./tower_config", function (err, result) {
             if (err) {
@@ -33,6 +41,7 @@ cc.Class({
                 _this.currentDamage = _this.towerConfig.damage[_this.levelCount];
                 _this.currentAttackRange = _this.towerConfig.actack_range[_this.levelCount];
                 _this.lookRange = _this.towerConfig.look_range;
+                _this.shootBulletDt = _this.towerConfig.shoot_dt[_this.levelCount];
             }
         });
     },
@@ -66,10 +75,9 @@ cc.Class({
 
         var distance = cc.pDistance(enemy.position, this.node.position);
 
-        if (distance < 200) {
+        if (distance < 400) {
             this.enemy = enemy;
         };
-        this.enemy = enemy;
     },
 
     update: function update(dt) {
@@ -78,7 +86,23 @@ cc.Class({
 
             var angle = cc.pAngleSigned(direction, cc.p(0, 1));
             this.node.rotation = 180 / Math.PI * angle;
+
+            if (this.currentBulletDt > this.shootBulletDt) {
+                this.currentBulletDt = 0;
+                this.shootBullet();
+            } else {
+                this.currentBulletDt += dt;
+            }
+
+            var distance = cc.pDistance(this.enemy.position, this.node.position);
+            if (distance > this.currentAttackRange) {
+                this.enemy = undefined;
+            };
         }
+    },
+
+    shootBullet: function shootBullet() {
+        _global2.default.event.fire("addBullet", this.node, this.enemy.position);
     }
 
 });

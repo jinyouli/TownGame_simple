@@ -335,8 +335,8 @@
     "relativePath": "scripts"
   },
   "125fa8aa-e484-42d0-ae07-2e37f1602575": {
-    "asset": 1540980207203,
-    "meta": 1540980207228,
+    "asset": 1541054125075,
+    "meta": 1541054125112,
     "relativePath": "game_scene.fire"
   },
   "99773b17-20a8-445b-be12-b69f17658178": {
@@ -375,8 +375,8 @@
     "relativePath": "scripts/build_menu.js"
   },
   "27693e42-f64f-4eb8-a881-5f71c984b811": {
-    "asset": 1540949925967,
-    "meta": 1540949926155,
+    "asset": 1541039661664,
+    "meta": 1541039661676,
     "relativePath": "prefabs/level_1.prefab"
   },
   "c940534a-407c-4a6b-83d6-6c528a98784d": {
@@ -440,7 +440,7 @@
     "relativePath": "scripts/gameUILayer.js"
   },
   "6486d399-931e-4e4e-9215-7ad7ee5ab45e": {
-    "asset": 1540889386817,
+    "asset": 1540971455462,
     "meta": 1540889259289,
     "relativePath": "resources"
   },
@@ -454,24 +454,39 @@
     "meta": 1540970667434,
     "relativePath": "scripts/enemy.js"
   },
-  "20d5c658-aa41-4ccd-b093-211eb38a92fc": {
-    "asset": 1540972176060,
-    "meta": 1540971455462,
-    "relativePath": "resources/tower_config.json"
-  },
   "b11af5ba-da95-4d2d-82e4-57331de9097e": {
     "asset": 1540979418582,
     "meta": 1540889386818,
     "relativePath": "resources/level_config.json"
   },
-  "95b9dd94-916c-46d8-baa5-6a148c28bd05": {
-    "asset": 1540979959587,
-    "meta": 1540979962574,
-    "relativePath": "scripts/level.js"
+  "6c978fd8-53f3-4d62-8741-9df117ba49e4": {
+    "asset": 1541039447475,
+    "meta": 1541039528224,
+    "relativePath": "res/images/bullet.png"
+  },
+  "e7b81408-c4cc-46ed-9955-fdd8f6876a88": {
+    "asset": 1541039572683,
+    "meta": 1541039572688,
+    "relativePath": "prefabs/bullet.prefab"
+  },
+  "20d5c658-aa41-4ccd-b093-211eb38a92fc": {
+    "asset": 1541040461926,
+    "meta": 1540971455462,
+    "relativePath": "resources/tower_config.json"
   },
   "99bbecff-1c92-4630-9ce5-1b4ea385bc08": {
-    "asset": 1540980058559,
-    "meta": 1540980061318,
+    "asset": 1541041730200,
+    "meta": 1541043825163,
     "relativePath": "scripts/tower.js"
+  },
+  "95b9dd94-916c-46d8-baa5-6a148c28bd05": {
+    "asset": 1541053124584,
+    "meta": 1541053222220,
+    "relativePath": "scripts/level.js"
+  },
+  "1ca12921-0baf-4469-9d56-ae4e653cbae8": {
+    "asset": 1541054112775,
+    "meta": 1541054119954,
+    "relativePath": "scripts/bullet.js"
   }
 }
