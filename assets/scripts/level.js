@@ -202,7 +202,7 @@ cc.Class({
         let bullet = cc.instantiate(this.bulletPrefab);
         bullet.position = tower.position;
         bullet.parent = this.node;
-        bullet.getComponent("bullet").initWithData(tower, position);
+        bullet.getComponent("bullet").initWithData(tower, position, this.enemyNodeList);
     },
 
     update: function (dt){
@@ -245,7 +245,7 @@ cc.Class({
             for(let i=0; i<this.towerPosNodes.length; i++){
                 let tower = this.towerPosNodes[i].tower;
 
-                if (tower) {
+                if (tower != undefined) {
 
                     for(let j=0; j < this.enemyNodeList.length; j++){
                         let enemy = this.enemyNodeList[j];

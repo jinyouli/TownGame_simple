@@ -84,14 +84,19 @@ cc.Class({
             }
 
             let distance = cc.pDistance(this.enemy.position, this.node.position);
-            if (distance > this.currentAttackRange) {
+            if (distance > this.currentAttackRange && this.enemy.getComponent("enemy").isLiving() == false) {
                 this.enemy = undefined;
             };
+
         }
     },
 
     shootBullet: function(){
         global.event.fire("addBullet",this.node, this.enemy.position);
+    },
+
+    getDamage: function(){
+        return this.currentDamage;
     }
 
 });

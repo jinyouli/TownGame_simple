@@ -95,7 +95,7 @@ cc.Class({
             }
 
             var distance = cc.pDistance(this.enemy.position, this.node.position);
-            if (distance > this.currentAttackRange) {
+            if (distance > this.currentAttackRange && this.enemy.getComponent("enemy").isLiving() == false) {
                 this.enemy = undefined;
             };
         }
@@ -103,6 +103,10 @@ cc.Class({
 
     shootBullet: function shootBullet() {
         _global2.default.event.fire("addBullet", this.node, this.enemy.position);
+    },
+
+    getDamage: function getDamage() {
+        return this.currentDamage;
     }
 
 });

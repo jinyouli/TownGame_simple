@@ -11,7 +11,7 @@ cc.Class({
     },
 
     onLoad : function (){
-        this.nowTime = 3;
+        this.nowTime = 4;
     },
 
     update: function(dt) {
@@ -22,6 +22,7 @@ cc.Class({
                 this.limitTimeLabel.string = Math.floor(this.nowTime);
 
                 if (Math.floor(this.nowTime) == 0) {
+                    this.limitTimeLabel.string = "";
                     this.nowTime = 0;
                     global.event.fire("game_start");
                 };

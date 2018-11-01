@@ -335,8 +335,8 @@
     "relativePath": "scripts"
   },
   "125fa8aa-e484-42d0-ae07-2e37f1602575": {
-    "asset": 1541054125075,
-    "meta": 1541054125112,
+    "asset": 1541069146878,
+    "meta": 1541069146892,
     "relativePath": "game_scene.fire"
   },
   "99773b17-20a8-445b-be12-b69f17658178": {
@@ -425,19 +425,14 @@
     "relativePath": "res/images/mash_room_6.png"
   },
   "f40d78ac-be1c-4263-80a8-bd9a5bdd46ad": {
-    "asset": 1540879822712,
-    "meta": 1540879822720,
+    "asset": 1541063427338,
+    "meta": 1541063427346,
     "relativePath": "prefabs/mash_0.prefab"
   },
   "f7580ca5-d91d-4c56-9d6d-8edddd25d781": {
     "asset": 1540882961581,
     "meta": 1540882962909,
     "relativePath": "scripts/game_world.js"
-  },
-  "b8ae9036-7367-48ef-9259-0056f7739356": {
-    "asset": 1540888220977,
-    "meta": 1540888224203,
-    "relativePath": "scripts/gameUILayer.js"
   },
   "6486d399-931e-4e4e-9215-7ad7ee5ab45e": {
     "asset": 1540971455462,
@@ -448,11 +443,6 @@
     "asset": 1540968304927,
     "meta": 1540889386815,
     "relativePath": "resources/enemy_config.json"
-  },
-  "a110e7e5-afd8-4a98-ba4e-274a5550b55c": {
-    "asset": 1540970058457,
-    "meta": 1540970667434,
-    "relativePath": "scripts/enemy.js"
   },
   "b11af5ba-da95-4d2d-82e4-57331de9097e": {
     "asset": 1540979418582,
@@ -474,19 +464,34 @@
     "meta": 1540971455462,
     "relativePath": "resources/tower_config.json"
   },
-  "99bbecff-1c92-4630-9ce5-1b4ea385bc08": {
-    "asset": 1541041730200,
-    "meta": 1541043825163,
-    "relativePath": "scripts/tower.js"
+  "b8ae9036-7367-48ef-9259-0056f7739356": {
+    "asset": 1541059716206,
+    "meta": 1541062211430,
+    "relativePath": "scripts/gameUILayer.js"
   },
-  "95b9dd94-916c-46d8-baa5-6a148c28bd05": {
-    "asset": 1541053124584,
-    "meta": 1541053222220,
-    "relativePath": "scripts/level.js"
+  "e991cc6c-9279-4352-a72b-6fd7b93650f9": {
+    "asset": 1541062835833,
+    "meta": 1541062835842,
+    "relativePath": "prefabs/life_progress.prefab"
   },
   "1ca12921-0baf-4469-9d56-ae4e653cbae8": {
-    "asset": 1541054112775,
-    "meta": 1541054119954,
+    "asset": 1541065200454,
+    "meta": 1541065229049,
     "relativePath": "scripts/bullet.js"
+  },
+  "a110e7e5-afd8-4a98-ba4e-274a5550b55c": {
+    "asset": 1541065302747,
+    "meta": 1541065318551,
+    "relativePath": "scripts/enemy.js"
+  },
+  "95b9dd94-916c-46d8-baa5-6a148c28bd05": {
+    "asset": 1541065786842,
+    "meta": 1541069141617,
+    "relativePath": "scripts/level.js"
+  },
+  "99bbecff-1c92-4630-9ce5-1b4ea385bc08": {
+    "asset": 1541065704348,
+    "meta": 1541069141618,
+    "relativePath": "scripts/tower.js"
   }
 }

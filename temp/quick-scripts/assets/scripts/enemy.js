@@ -18,6 +18,11 @@ cc.Class({
         spriteFrames: {
             default: [],
             type: cc.SpriteFrame
+        },
+
+        lifeProgressBar: {
+            default: null,
+            type: cc.ProgressBar
         }
     },
 
@@ -25,6 +30,8 @@ cc.Class({
         this.state = EnemyState.Invalid;
         this.node.opacity = 0;
         this.currentPathCount = 0;
+        this.currentHealth = 0;
+        this.totalHealth = 1;
     },
 
     initWithData: function initWithData(type, partPointer) {
@@ -42,7 +49,8 @@ cc.Class({
                 // cc.log("result == " + JSON.stringify(result));
                 var config = result["enemy_" + type];
                 _this.speed = config.speed;
-                _this.health = config.health;
+                _this.currentHealth = config.health;
+                _this.totalHealth = config.health;
                 _this.setState(EnemyState.Running);
             }
         });
@@ -64,6 +72,8 @@ cc.Class({
                 this.node.position = cc.pAdd(this.node.position, cc.pMult(this.direction, this.speed * dt));
             }
         };
+
+        this.lifeProgressBar.progress = this.currentHealth / this.totalHealth;
     },
 
     setState: function setState(state) {
@@ -90,6 +100,14 @@ cc.Class({
             return true;
         }
         return false;
+    },
+
+    beAttacked: function beAttacked(damage) {
+        this.currentHealth -= damage;
+        if (this.currentHealth < 0) {
+            this.currentHealth = 0;
+            this.setState(EnemyState.Dead);
+        };
     }
 
 });
