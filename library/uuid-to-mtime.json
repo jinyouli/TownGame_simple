@@ -230,7 +230,7 @@
     "relativePath": "res"
   },
   "d83f801a-44d8-465c-bb92-7179c37d4ea0": {
-    "asset": 1540870202920,
+    "asset": 1541039528044,
     "meta": 1540611067873,
     "relativePath": "res/images"
   },
@@ -330,7 +330,7 @@
     "relativePath": "res/images/塔防_48.png"
   },
   "7df74fae-bc45-4b0a-ab32-9105134a46a2": {
-    "asset": 1540889361821,
+    "asset": 1541039080531,
     "meta": 1540611067896,
     "relativePath": "scripts"
   },
@@ -340,7 +340,7 @@
     "relativePath": "game_scene.fire"
   },
   "99773b17-20a8-445b-be12-b69f17658178": {
-    "asset": 1540870267588,
+    "asset": 1541062835842,
     "meta": 1540611638184,
     "relativePath": "prefabs"
   },
@@ -474,24 +474,24 @@
     "meta": 1541062835842,
     "relativePath": "prefabs/life_progress.prefab"
   },
-  "1ca12921-0baf-4469-9d56-ae4e653cbae8": {
-    "asset": 1541065200454,
-    "meta": 1541065229049,
-    "relativePath": "scripts/bullet.js"
-  },
-  "a110e7e5-afd8-4a98-ba4e-274a5550b55c": {
-    "asset": 1541065302747,
-    "meta": 1541065318551,
-    "relativePath": "scripts/enemy.js"
-  },
-  "95b9dd94-916c-46d8-baa5-6a148c28bd05": {
-    "asset": 1541065786842,
-    "meta": 1541069141617,
-    "relativePath": "scripts/level.js"
-  },
   "99bbecff-1c92-4630-9ce5-1b4ea385bc08": {
     "asset": 1541065704348,
     "meta": 1541069141618,
     "relativePath": "scripts/tower.js"
+  },
+  "a110e7e5-afd8-4a98-ba4e-274a5550b55c": {
+    "asset": 1541124131763,
+    "meta": 1541124143720,
+    "relativePath": "scripts/enemy.js"
+  },
+  "1ca12921-0baf-4469-9d56-ae4e653cbae8": {
+    "asset": 1541126013084,
+    "meta": 1541126017205,
+    "relativePath": "scripts/bullet.js"
+  },
+  "95b9dd94-916c-46d8-baa5-6a148c28bd05": {
+    "asset": 1541129102599,
+    "meta": 1541129104799,
+    "relativePath": "scripts/level.js"
   }
 }

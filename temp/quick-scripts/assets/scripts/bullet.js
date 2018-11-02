@@ -30,12 +30,17 @@ cc.Class({
 
         for (var i = 0; i < this.enemyNodeList.length; i++) {
             var enemy = this.enemyNodeList[i];
-            var distance = cc.pDistance(enemy.position, this.node.position);
-            if (distance < enemy.width * 0.5 + this.node.width * 0.5) {
 
-                enemy.getComponent("enemy").beAttacked(this.damage);
+            if (enemy) {
+                if (enemy.getComponent("enemy").isLiving()) {
+                    var distance = cc.pDistance(enemy.position, this.node.position);
+                    if (distance < enemy.width * 0.5 + this.node.width * 0.5) {
 
-                this.node.destroy();
+                        enemy.getComponent("enemy").beAttacked(this.damage);
+
+                        this.node.destroy();
+                    };
+                };
             };
         }
 

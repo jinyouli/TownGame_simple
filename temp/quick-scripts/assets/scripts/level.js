@@ -251,11 +251,11 @@ cc.Class({
 
                     for (var j = 0; j < this.enemyNodeList.length; j++) {
                         var enemy = this.enemyNodeList[j];
-
-                        if (enemy.getComponent("enemy").isLiving) {
-                            // let distance = cc.pDistance(tower);
+                        if (enemy.getComponent("enemy").isLiving()) {
                             tower.getComponent("tower").setEnemy(enemy);
-                        };
+                        } else if (enemy.getComponent("enemy").isDead()) {
+                            this.enemyNodeList.splice(j, 1);
+                        }
                     }
                 };
             }

@@ -28,12 +28,17 @@ cc.Class({
 
         for(let i=0; i < this.enemyNodeList.length; i++){
             let enemy = this.enemyNodeList[i];
-            let distance = cc.pDistance(enemy.position,this.node.position);
+
+            if (enemy) {
+                if (enemy.getComponent("enemy").isLiving()) {
+                let distance = cc.pDistance(enemy.position,this.node.position);
             if (distance < (enemy.width * 0.5 + this.node.width * 0.5)) {
 
                 enemy.getComponent("enemy").beAttacked(this.damage);
 
                 this.node.destroy();
+            };
+            };
             };
         }        
 

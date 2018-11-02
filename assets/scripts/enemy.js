@@ -82,6 +82,14 @@ cc.Class({
             this.node.opacity = 255;
                 break;
             case EnemyState.Dead:
+                let action = cc.fadeOut(1);
+
+                let sequence = cc.sequence(action, cc.callFunc(function(){
+                    console.log("call func actin!!!");
+                    this.node.destroy();
+                },this));
+                this.node.runAction(sequence);
+
                 break;
             case EnemyState.EndPath:
                 break;
@@ -98,11 +106,19 @@ cc.Class({
         return false;
     },
 
+    isDead: function(){
+        if (this.state == EnemyState.Dead) {
+            return true;
+        };
+        return false;
+    },
+
     beAttacked: function (damage){
         this.currentHealth -= damage;
         if (this.currentHealth < 0) {
             this.currentHealth = 0;
             this.setState(EnemyState.Dead);
+             // this.node.destroy();
         };
     }
 
