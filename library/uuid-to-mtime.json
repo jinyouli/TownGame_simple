@@ -335,8 +335,8 @@
     "relativePath": "scripts"
   },
   "125fa8aa-e484-42d0-ae07-2e37f1602575": {
-    "asset": 1541069146878,
-    "meta": 1541069146892,
+    "asset": 1541387120250,
+    "meta": 1541387120262,
     "relativePath": "game_scene.fire"
   },
   "99773b17-20a8-445b-be12-b69f17658178": {
@@ -369,25 +369,15 @@
     "meta": 1540785399474,
     "relativePath": "scripts/global.js"
   },
-  "e52e85b0-c62f-47a8-9b67-999ecb702a7f": {
-    "asset": 1540786391689,
-    "meta": 1540786428150,
-    "relativePath": "scripts/build_menu.js"
-  },
   "27693e42-f64f-4eb8-a881-5f71c984b811": {
-    "asset": 1541039661664,
-    "meta": 1541039661676,
+    "asset": 1541387400376,
+    "meta": 1541387400403,
     "relativePath": "prefabs/level_1.prefab"
   },
   "c940534a-407c-4a6b-83d6-6c528a98784d": {
     "asset": 1540803700047,
     "meta": 1540803700057,
     "relativePath": "prefabs/update_menu.prefab"
-  },
-  "88334e32-8c5b-496f-b1fa-b0f9b2e3d772": {
-    "asset": 1540803658433,
-    "meta": 1540803661659,
-    "relativePath": "scripts/update_menu.js"
   },
   "e1407987-2a54-4f38-a97d-385124877613": {
     "asset": 1516585666000,
@@ -425,8 +415,8 @@
     "relativePath": "res/images/mash_room_6.png"
   },
   "f40d78ac-be1c-4263-80a8-bd9a5bdd46ad": {
-    "asset": 1541063427338,
-    "meta": 1541063427346,
+    "asset": 1541387233964,
+    "meta": 1541387233992,
     "relativePath": "prefabs/mash_0.prefab"
   },
   "f7580ca5-d91d-4c56-9d6d-8edddd25d781": {
@@ -438,16 +428,6 @@
     "asset": 1540971455462,
     "meta": 1540889259289,
     "relativePath": "resources"
-  },
-  "0b807b53-45ca-4f40-86ac-fe9809f4b24e": {
-    "asset": 1540968304927,
-    "meta": 1540889386815,
-    "relativePath": "resources/enemy_config.json"
-  },
-  "b11af5ba-da95-4d2d-82e4-57331de9097e": {
-    "asset": 1540979418582,
-    "meta": 1540889386818,
-    "relativePath": "resources/level_config.json"
   },
   "6c978fd8-53f3-4d62-8741-9df117ba49e4": {
     "asset": 1541039447475,
@@ -464,34 +444,69 @@
     "meta": 1540971455462,
     "relativePath": "resources/tower_config.json"
   },
-  "b8ae9036-7367-48ef-9259-0056f7739356": {
-    "asset": 1541059716206,
-    "meta": 1541062211430,
-    "relativePath": "scripts/gameUILayer.js"
-  },
   "e991cc6c-9279-4352-a72b-6fd7b93650f9": {
     "asset": 1541062835833,
     "meta": 1541062835842,
     "relativePath": "prefabs/life_progress.prefab"
-  },
-  "99bbecff-1c92-4630-9ce5-1b4ea385bc08": {
-    "asset": 1541065704348,
-    "meta": 1541069141618,
-    "relativePath": "scripts/tower.js"
-  },
-  "a110e7e5-afd8-4a98-ba4e-274a5550b55c": {
-    "asset": 1541124131763,
-    "meta": 1541124143720,
-    "relativePath": "scripts/enemy.js"
   },
   "1ca12921-0baf-4469-9d56-ae4e653cbae8": {
     "asset": 1541126013084,
     "meta": 1541126017205,
     "relativePath": "scripts/bullet.js"
   },
+  "e52e85b0-c62f-47a8-9b67-999ecb702a7f": {
+    "asset": 1541130471087,
+    "meta": 1541130479979,
+    "relativePath": "scripts/build_menu.js"
+  },
+  "b8ae9036-7367-48ef-9259-0056f7739356": {
+    "asset": 1541130501608,
+    "meta": 1541130504801,
+    "relativePath": "scripts/gameUILayer.js"
+  },
+  "88334e32-8c5b-496f-b1fa-b0f9b2e3d772": {
+    "asset": 1541130524716,
+    "meta": 1541130527575,
+    "relativePath": "scripts/update_menu.js"
+  },
+  "99bbecff-1c92-4630-9ce5-1b4ea385bc08": {
+    "asset": 1541130529900,
+    "meta": 1541130532704,
+    "relativePath": "scripts/tower.js"
+  },
+  "87a5663b-a0a0-44e2-8f55-5b4cd7d60ec4": {
+    "asset": 1541382584641,
+    "meta": 1541382588833,
+    "relativePath": "res/images/map.png"
+  },
+  "19e455c6-d5e0-4a90-b114-cee409bd6857": {
+    "asset": 1541384136605,
+    "meta": 1541384136632,
+    "relativePath": "level1.anim"
+  },
+  "6e8e1260-a567-49a7-a5c5-3a56616f5bea": {
+    "asset": 1539674176000,
+    "meta": 1541384512105,
+    "relativePath": "scripts/map_gen.js"
+  },
+  "0b807b53-45ca-4f40-86ac-fe9809f4b24e": {
+    "asset": 1541386996830,
+    "meta": 1540889386815,
+    "relativePath": "resources/enemy_config.json"
+  },
+  "b11af5ba-da95-4d2d-82e4-57331de9097e": {
+    "asset": 1541386992518,
+    "meta": 1540889386818,
+    "relativePath": "resources/level_config.json"
+  },
   "95b9dd94-916c-46d8-baa5-6a148c28bd05": {
-    "asset": 1541129102599,
-    "meta": 1541129104799,
+    "asset": 1541388557465,
+    "meta": 1541388562709,
     "relativePath": "scripts/level.js"
+  },
+  "a110e7e5-afd8-4a98-ba4e-274a5550b55c": {
+    "asset": 1541388785261,
+    "meta": 1541388787473,
+    "relativePath": "scripts/enemy.js"
   }
 }

@@ -4,7 +4,7 @@ cc._RF.push(module, 'b8ae9A2c2dI75JZAFb3c5NW', 'gameUILayer');
 
 "use strict";
 
-var _global = require("../global");
+var _global = require("./global");
 
 var _global2 = _interopRequireDefault(_global);
 

@@ -34,13 +34,13 @@ cc.Class({
         this.totalHealth = 1;
     },
 
-    initWithData: function initWithData(type, partPointer) {
+    initWithData: function initWithData(type, positionArray) {
         var _this = this;
 
         this.node.getComponent(cc.Sprite).spriteFrame = this.spriteFrames[type];
-        this.partPointer = partPointer;
+        this.partPointer = positionArray;
 
-        this.node.position = this.partPointer[0].position;
+        this.node.position = this.partPointer[0];
 
         cc.loader.loadRes("./enemy_config", function (err, result) {
             if (err) {
@@ -58,7 +58,7 @@ cc.Class({
 
     update: function update(dt) {
         if (this.state == EnemyState.Running) {
-            var distance = cc.pDistance(this.node.position, this.partPointer[this.currentPathCount].position);
+            var distance = cc.pDistance(this.node.position, this.partPointer[this.currentPathCount]);
             if (distance < 10) {
                 this.currentPathCount++;
 
@@ -67,13 +67,13 @@ cc.Class({
                     return;
                 };
 
-                this.direction = cc.pNormalize(cc.pSub(this.partPointer[this.currentPathCount].position, this.node.position));
+                this.direction = cc.pNormalize(cc.pSub(this.partPointer[this.currentPathCount], this.node.position));
             } else {
                 this.node.position = cc.pAdd(this.node.position, cc.pMult(this.direction, this.speed * dt));
             }
         };
 
-        this.lifeProgressBar.progress = this.currentHealth / this.totalHealth;
+        this.lifeProgressBar.progress = (this.totalHealth - this.currentHealth) / this.totalHealth;
     },
 
     setState: function setState(state) {
@@ -90,7 +90,7 @@ cc.Class({
 
                 var sequence = cc.sequence(action, cc.callFunc(function () {
                     console.log("call func actin!!!");
-                    this.node.destroy();
+                    // this.node.destroy();
                 }, this));
                 this.node.runAction(sequence);
 
@@ -106,7 +106,7 @@ cc.Class({
     isLiving: function isLiving() {
         if (this.state == EnemyState.Running) {
             return true;
-        }
+        };
         return false;
     },
 

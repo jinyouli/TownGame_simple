@@ -1,0 +1,17 @@
+{
+	"tower_a" :
+	{
+		"damage" : [1,2,3],
+		"actack_range" : [100,150,200],
+		"look_range" : 300,
+		"shoot_dt" : [0.5,0.4,0.3]
+	},
+
+	"tower_b" :
+	{
+		"damage" : [2,3,4],
+		"actack_range" : [150,200,250],
+		"look_range" : 400,
+		"shoot_dt" : [0.5,0.4,0.3]
+	}
+}

@@ -30,11 +30,11 @@ cc.Class({
 
     },
 
-    initWithData : function (type , partPointer){
+    initWithData : function (type , positionArray){
         this.node.getComponent(cc.Sprite).spriteFrame = this.spriteFrames[type];
-        this.partPointer = partPointer;
+        this.partPointer = positionArray;
 
-        this.node.position = this.partPointer[0].position;
+        this.node.position = this.partPointer[0];
 
         cc.loader.loadRes("./enemy_config", (err,result) =>{
             if(err){
@@ -52,7 +52,7 @@ cc.Class({
 
     update: function (dt){
         if (this.state == EnemyState.Running) {
-            let distance = cc.pDistance(this.node.position,this.partPointer[this.currentPathCount].position);
+            let distance = cc.pDistance(this.node.position,this.partPointer[this.currentPathCount]);
             if (distance < 10) {
                 this.currentPathCount ++;
 
@@ -61,7 +61,7 @@ cc.Class({
                     return;
                 };
 
-                this.direction = cc.pNormalize(cc.pSub(this.partPointer[this.currentPathCount].position, this.node.position));
+                this.direction = cc.pNormalize(cc.pSub(this.partPointer[this.currentPathCount], this.node.position));
             }
             else
             {
@@ -69,7 +69,7 @@ cc.Class({
             }
         };
 
-        this.lifeProgressBar.progress = this.currentHealth / this.totalHealth;
+        this.lifeProgressBar.progress = (this.totalHealth - this.currentHealth) / this.totalHealth;
     },
 
     setState: function(state){
@@ -86,7 +86,7 @@ cc.Class({
 
                 let sequence = cc.sequence(action, cc.callFunc(function(){
                     console.log("call func actin!!!");
-                    this.node.destroy();
+                    // this.node.destroy();
                 },this));
                 this.node.runAction(sequence);
 
@@ -102,7 +102,7 @@ cc.Class({
     isLiving: function(){
         if(this.state == EnemyState.Running){
             return true;
-        }
+        };
         return false;
     },
 

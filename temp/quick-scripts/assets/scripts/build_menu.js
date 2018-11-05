@@ -4,7 +4,7 @@ cc._RF.push(module, 'e52e8Wwxi9HqJtnmZ7LcCp/', 'build_menu', __filename);
 
 "use strict";
 
-var _global = require("../global");
+var _global = require("./global");
 
 var _global2 = _interopRequireDefault(_global);
 

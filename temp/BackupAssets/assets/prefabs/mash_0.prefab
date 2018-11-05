@@ -163,7 +163,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
+      "width": 0,
       "height": 15
     },
     "_rotationX": 0,
@@ -258,7 +258,7 @@
       "__id__": 4
     },
     "_N$mode": 0,
-    "_N$progress": 1,
+    "_N$progress": 0,
     "_N$reverse": false
   },
   {

@@ -1,4 +1,6 @@
-import global from '../global'
+import global from "./global"
+
+var map_gen = require("map_gen");
 
 const TowerNodeState = {
     Invalid : -1,
@@ -14,10 +16,15 @@ cc.Class({
 
     properties: {
         
-        enemyPathNodes: {
-            default : [],
-            type : cc.Node
+        map : {
+            type: map_gen,
+            default : null,
         },
+
+        // enemyPathNodes: {
+        //     default : [],
+        //     type : cc.Node
+        // },
 
         towerPosNodes: {
             default : [],
@@ -51,6 +58,7 @@ cc.Class({
     },
 
     onLoad: function() {
+
         for(let i=0; i < this.towerPosNodes.length; i++){
             let node = this.towerPosNodes[i];
             this.setState(node,TowerNodeState.Null);
@@ -69,6 +77,13 @@ cc.Class({
         this.addWaveCurrentTime = 0;
 
         this.enemyNodeList = [];
+    },
+
+    start () {
+        this.road_set = this.map.get_road_set();
+        this.enemyPathNodes = this.road_set[0];
+        cc.log("路径 == " + this.enemyPathNodes);
+
     },
 
     setTouchEvent: function(node){
@@ -249,11 +264,13 @@ cc.Class({
 
                     for(let j=0; j < this.enemyNodeList.length; j++){
                         var enemy = this.enemyNodeList[j];
+
                         if (enemy.getComponent("enemy").isLiving()) {
                             tower.getComponent("tower").setEnemy(enemy);
                         }
                         else if(enemy.getComponent("enemy").isDead()){
                             this.enemyNodeList.splice(j , 1);
+                            enemy.destroy();
                         }
                     }
                 };

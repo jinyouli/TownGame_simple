@@ -1,0 +1,22 @@
+{
+
+	"enemy_0":{
+		"speed" : 50,
+		"health" : 2
+		},
+
+	"enemy_1":{
+		"speed" : 30,
+		"health" : 1
+		},
+
+	"enemy_2":{
+		"speed" : 20,
+		"health" : 2
+		},
+
+	"enemy_3":{
+		"speed" : 40,
+		"health" : 5
+		}
+}

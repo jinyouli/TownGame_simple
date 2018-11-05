@@ -4,11 +4,13 @@ cc._RF.push(module, '95b9d2UkWxG2LqlahSMKL0F', 'level', __filename);
 
 "use strict";
 
-var _global = require("../global");
+var _global = require("./global");
 
 var _global2 = _interopRequireDefault(_global);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var map_gen = require("map_gen");
 
 var TowerNodeState = {
     Invalid: -1,
@@ -23,10 +25,15 @@ cc.Class({
 
     properties: {
 
-        enemyPathNodes: {
-            default: [],
-            type: cc.Node
+        map: {
+            type: map_gen,
+            default: null
         },
+
+        // enemyPathNodes: {
+        //     default : [],
+        //     type : cc.Node
+        // },
 
         towerPosNodes: {
             default: [],
@@ -60,6 +67,7 @@ cc.Class({
     },
 
     onLoad: function onLoad() {
+
         for (var i = 0; i < this.towerPosNodes.length; i++) {
             var node = this.towerPosNodes[i];
             this.setState(node, TowerNodeState.Null);
@@ -79,6 +87,13 @@ cc.Class({
 
         this.enemyNodeList = [];
     },
+
+    start: function start() {
+        this.road_set = this.map.get_road_set();
+        this.enemyPathNodes = this.road_set[0];
+        cc.log("路径 == " + this.enemyPathNodes);
+    },
+
 
     setTouchEvent: function setTouchEvent(node) {
 
@@ -251,10 +266,12 @@ cc.Class({
 
                     for (var j = 0; j < this.enemyNodeList.length; j++) {
                         var enemy = this.enemyNodeList[j];
+
                         if (enemy.getComponent("enemy").isLiving()) {
                             tower.getComponent("tower").setEnemy(enemy);
                         } else if (enemy.getComponent("enemy").isDead()) {
                             this.enemyNodeList.splice(j, 1);
+                            enemy.destroy();
                         }
                     }
                 };
