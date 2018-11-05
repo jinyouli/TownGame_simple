@@ -87,7 +87,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "map",
+    "_name": "map1",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -148,10 +148,10 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "44caa5b9-5f41-43c3-9415-514d2b8a446a"
+      "__uuid__": "bac8d293-4329-4472-b080-026b57a06fbf"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -173,7 +173,7 @@
     "asset": {
       "__uuid__": "27693e42-f64f-4eb8-a881-5f71c984b811"
     },
-    "fileId": "6fgaG1oAhHG5bKIkQGDyG5",
+    "fileId": "45T0Zf7OdAl4eZQClBwa38",
     "sync": false
   },
   {

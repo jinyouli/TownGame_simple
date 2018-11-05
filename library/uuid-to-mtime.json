@@ -370,8 +370,8 @@
     "relativePath": "scripts/global.js"
   },
   "27693e42-f64f-4eb8-a881-5f71c984b811": {
-    "asset": 1541387400376,
-    "meta": 1541387400403,
+    "asset": 1541389470593,
+    "meta": 1541389470722,
     "relativePath": "prefabs/level_1.prefab"
   },
   "c940534a-407c-4a6b-83d6-6c528a98784d": {
@@ -508,5 +508,10 @@
     "asset": 1541388785261,
     "meta": 1541388787473,
     "relativePath": "scripts/enemy.js"
+  },
+  "2ae8d4d9-c25a-4aa8-a226-136f64e81273": {
+    "asset": 1481715896000,
+    "meta": 1541389417606,
+    "relativePath": "res/images/map1.png"
   }
 }
